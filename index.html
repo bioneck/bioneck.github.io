@@ -142,9 +142,9 @@
   <div class="intro-navigate">
       <p class="navigater-list">
         
-          <a id="beautifont" class="main-nav-link" href="/">Startseite</a>
+          <a id="beautifont" class="main-nav-link" href="/">Home</a>
         
-          <a id="beautifont" class="main-nav-link" href="/archives">Archive</a>
+          <a id="beautifont" class="main-nav-link" href="/archives">Archives</a>
         
           <a id="beautifont" class="main-nav-link" href="/tags">Tags</a>
         
@@ -163,7 +163,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-hello-world"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-django-mongodb搭配使用了解"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -171,7 +171,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/05/14/hello-world/">Hello World</a>
+      <a class="article-title" href="/2017/05/15/django-mongodb搭配使用了解/">django+mongodb搭配使用了解</a>
     </h1>
   
 
@@ -179,29 +179,25 @@
     
     <div class="article-meta">
       
-	<a href="/2017/05/14/hello-world/" class="article-date">
-	  <time datetime="2017-05-13T17:26:01.000Z" itemprop="datePublished">2017-05-14</time>
+	<a href="/2017/05/15/django-mongodb搭配使用了解/" class="article-date">
+	  <time datetime="2017-05-15T10:09:15.000Z" itemprop="datePublished">2017-05-15</time>
 	</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>因为s1coder的帖子部分是使用的mongoDB,所以稍微了解了下mongoDB和django的搭配使用,万万没想到这居然是个个大坑.</p>
+<p>搜索了下大部分资料都是推荐用pymongo做model来使用,但是有个致命的缺点就是不能使用admin界面,问题不能用admin的django和咸鱼有什么区别.<br>另外一个就是使用django的分支django-nonrel,django-nonrel有个优点就是提供了和原生ORM十分相近的ORM供使用,然而到django-nonrel的<strong><a href="https://github.com/django-nonrel/django" target="_blank" rel="external">github</a></strong>看了下最近一次更新是在两年前,然后再看看这个项目组的另一个项目<strong><a href="https://github.com/django-nonrel/mongodb-engine" target="_blank" rel="external">mongodb-engine</a></strong>也是早在去年就已经没有人维护了,issues中好几个问项目还有没有活着的都已经有一年没有回复了.但是但从文档来说这应该是支持最好的一个,可以使用原生ORM的同时还可以使用自带的admin界面.</p>
+<p>whatever,帖子这个模块最后再弄好了,先去把账户模块那边的管理弄好算了.</p>
 
       
     </div>
     <footer class="article-footer">
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/django/">django</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/django-mongodb/">django+mongodb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
     </footer>
   </div>
   

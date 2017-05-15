@@ -3,21 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>archives: 2017 | │▌:│▌</title>
+  <title>django+mongodb搭配使用了解 | │▌:│▌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+  <meta name="keywords" content="pythondjangodjango+mongodb" />
   
   
   
-  <meta name="description" content="He was aware that he was still a child.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="│▌:│▌">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  
+  <meta name="description" content="因为s1coder的帖子部分是使用的mongoDB,所以稍微了解了下mongoDB和django的搭配使用,万万没想到这居然是个个大坑. 搜索了下大部分资料都是推荐用pymongo做model来使用,但是有个致命的缺点就是不能使用admin界面,问题不能用admin的django和咸鱼有什么区别.另外一个就是使用django的分支django-nonrel,django-nonrel有个优点就是提">
+<meta name="keywords" content="python,django,django+mongodb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="django+mongodb搭配使用了解">
+<meta property="og:url" content="http://yoursite.com/2017/05/15/django-mongodb搭配使用了解/index.html">
 <meta property="og:site_name" content="│▌:│▌">
-<meta property="og:description" content="He was aware that he was still a child.">
+<meta property="og:description" content="因为s1coder的帖子部分是使用的mongoDB,所以稍微了解了下mongoDB和django的搭配使用,万万没想到这居然是个个大坑. 搜索了下大部分资料都是推荐用pymongo做model来使用,但是有个致命的缺点就是不能使用admin界面,问题不能用admin的django和咸鱼有什么区别.另外一个就是使用django的分支django-nonrel,django-nonrel有个优点就是提">
+<meta property="og:updated_time" content="2017-05-15T10:12:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="│▌:│▌">
-<meta name="twitter:description" content="He was aware that he was still a child.">
+<meta name="twitter:title" content="django+mongodb搭配使用了解">
+<meta name="twitter:description" content="因为s1coder的帖子部分是使用的mongoDB,所以稍微了解了下mongoDB和django的搭配使用,万万没想到这居然是个个大坑. 搜索了下大部分资料都是推荐用pymongo做model来使用,但是有个致命的缺点就是不能使用admin界面,问题不能用admin的django和咸鱼有什么区别.另外一个就是使用django的分支django-nonrel,django-nonrel有个优点就是提">
   
   <link rel="icon" href="/css/images/head_evangelion.jpg">
   <link rel="apple-touch-icon" href="/css/images/head_evangelion.jpg">
@@ -48,14 +52,12 @@
   
 
   
-    <link rel="stylesheet" href="/css/archive.css" >
-  
 
 </head>
 
 
 
-  <body>
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
 
 
   
@@ -78,7 +80,7 @@
             
               <a class="brand" style="
                  margin-top: 0px;"  
-                 >
+                href="#" data-toggle="modal" data-target="#myModal" >
                   <img width="124px" height="124px" alt="Hike News" src="/css/images/head_evangelion.jpg">
               </a>
             
@@ -145,105 +147,83 @@
             
       <div id="content" class="outer">
         
-          <section id="main">
-  <div class="archives-tags-wrap"><blockquote><span>There are 1 posts in total till now.</span></blockquote>
+          <section id="main" style="float:none;"><article id="post-django-mongodb搭配使用了解" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      django+mongodb搭配使用了解
+    </h1>
+  
 
-
-<!-- 分页显示 -->
-
-	
-	
-		
-		
-		  
-		  
-		  <section class="archives-wrap">
-		    <div class="archive-year-wrap">
-		      <h1><a href="/archives/2017" class="archive-year">2017</a></h1>
-		    </div>
-		    <div class="archives">
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
+      </header>
+    
+    <div class="article-meta">
       
-	<a href="/2017/05/15/django-mongodb搭配使用了解/" class="archive-article-date">
+	<a href="/2017/05/15/django-mongodb搭配使用了解/" class="article-date">
 	  <time datetime="2017-05-15T10:09:15.000Z" itemprop="datePublished">2017-05-15</time>
 	</a>
 
       
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/django-mongodb搭配使用了解/">django+mongodb搭配使用了解</a>
-    </h1>
-  
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>因为s1coder的帖子部分是使用的mongoDB,所以稍微了解了下mongoDB和django的搭配使用,万万没想到这居然是个个大坑.</p>
+<p>搜索了下大部分资料都是推荐用pymongo做model来使用,但是有个致命的缺点就是不能使用admin界面,问题不能用admin的django和咸鱼有什么区别.<br>另外一个就是使用django的分支django-nonrel,django-nonrel有个优点就是提供了和原生ORM十分相近的ORM供使用,然而到django-nonrel的<strong><a href="https://github.com/django-nonrel/django" target="_blank" rel="external">github</a></strong>看了下最近一次更新是在两年前,然后再看看这个项目组的另一个项目<strong><a href="https://github.com/django-nonrel/mongodb-engine" target="_blank" rel="external">mongodb-engine</a></strong>也是早在去年就已经没有人维护了,issues中好几个问项目还有没有活着的都已经有一年没有回复了.但是但从文档来说这应该是支持最好的一个,可以使用原生ORM的同时还可以使用自带的admin界面.</p>
+<p>whatever,帖子这个模块最后再弄好了,先去把账户模块那边的管理弄好算了.</p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2017/05/15/django-mongodb搭配使用了解/" data-title="django+mongodb搭配使用了解" data-url="http://yoursite.com/2017/05/15/django-mongodb搭配使用了解/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"iTimeTraveler"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/django/">django</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/django-mongodb/">django+mongodb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+  
 </article>
-	
-	
-		</div></section>
-	
 
-	<!-- 页数指示器 -->
-	
+<!-- Table of Contents -->
 
-
-
-
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+        <ol class="artnav">None</ol>
+    
+    </div>
+  </aside>
 </section>
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/django/">django</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/django-mongodb/">django+mongodb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/django/" style="font-size: 10px;">django</a> <a href="/tags/django-mongodb/" style="font-size: 10px;">django+mongodb</a> <a href="/tags/python/" style="font-size: 10px;">python</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/05/15/django-mongodb搭配使用了解/">django+mongodb搭配使用了解</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
         
       </div>
       
@@ -345,6 +325,8 @@
 
 
 
+
+  <script src="/js/dialog.js"></script>
 
 
 
