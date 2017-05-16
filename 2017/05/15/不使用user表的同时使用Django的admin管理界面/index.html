@@ -3,21 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>tag: django+mongodb | │▌:│▌</title>
+  <title>不使用user表的同时使用django的admin管理界面 | │▌:│▌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+  <meta name="keywords" content="pythondjangodjango+admin" />
   
   
   
-  <meta name="description" content="He was aware that he was still a child.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="│▌:│▌">
-<meta property="og:url" content="http://yoursite.com/tags/django-mongodb/index.html">
+  
+  <meta name="description" content="今天把AM的项目起了之后突然想起要使用django的admin管理还得用自带的user表来创建SU,跟群里讨论了下决定把这个干掉,试试能不能使用已有的自建user表接入新建的django project中,把django当做一个快速搭建的管理服务来用.">
+<meta name="keywords" content="python,django,django+admin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不使用user表的同时使用Django的admin管理界面">
+<meta property="og:url" content="http://yoursite.com/2017/05/15/不使用user表的同时使用Django的admin管理界面/index.html">
 <meta property="og:site_name" content="│▌:│▌">
-<meta property="og:description" content="He was aware that he was still a child.">
+<meta property="og:description" content="今天把AM的项目起了之后突然想起要使用django的admin管理还得用自带的user表来创建SU,跟群里讨论了下决定把这个干掉,试试能不能使用已有的自建user表接入新建的django project中,把django当做一个快速搭建的管理服务来用.">
+<meta property="og:updated_time" content="2017-05-16T15:22:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="│▌:│▌">
-<meta name="twitter:description" content="He was aware that he was still a child.">
+<meta name="twitter:title" content="不使用user表的同时使用Django的admin管理界面">
+<meta name="twitter:description" content="今天把AM的项目起了之后突然想起要使用django的admin管理还得用自带的user表来创建SU,跟群里讨论了下决定把这个干掉,试试能不能使用已有的自建user表接入新建的django project中,把django当做一个快速搭建的管理服务来用.">
   
   <link rel="icon" href="/css/images/head_evangelion.jpg">
   <link rel="apple-touch-icon" href="/css/images/head_evangelion.jpg">
@@ -48,14 +52,12 @@
   
 
   
-    <link rel="stylesheet" href="/css/archive.css" >
-  
 
 </head>
 
 
 
-  <body>
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
 
 
   
@@ -78,7 +80,7 @@
             
               <a class="brand" style="
                  margin-top: 0px;"  
-                 >
+                href="#" data-toggle="modal" data-target="#myModal" >
                   <img width="124px" height="124px" alt="Hike News" src="/css/images/head_evangelion.jpg">
               </a>
             
@@ -145,44 +147,90 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;">
-  
-  
-  
+          <section id="main" style="float:none;"><article id="post-不使用user表的同时使用Django的admin管理界面" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
     
     
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <h1><a href="/archives/2017" class="archive-year">2017</a></h1>
-        </div>
-        <div class="archives">
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      不使用user表的同时使用Django的admin管理界面
+    </h1>
+  
+
+      </header>
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
+    <div class="article-meta">
       
-	<a href="/2017/05/15/django-mongodb搭配使用了解/" class="archive-article-date">
+	<a href="/2017/05/15/不使用user表的同时使用Django的admin管理界面/" class="article-date">
 	  <time datetime="2017-05-15T10:09:15.000Z" itemprop="datePublished">2017-05-15</time>
 	</a>
 
       
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/django-mongodb搭配使用了解/">django+mongodb搭配使用了解</a>
-    </h1>
-  
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天把AM的项目起了之后突然想起要使用django的admin管理还得用自带的user表来创建SU,跟群里讨论了下决定把这个干掉,试试能不能使用已有的自建user表接入新建的django project中,把django当做一个快速搭建的管理服务来用.</p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2017/05/15/不使用user表的同时使用Django的admin管理界面/" data-title="不使用user表的同时使用Django的admin管理界面" data-url="http://yoursite.com/2017/05/15/不使用user表的同时使用Django的admin管理界面/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"iTimeTraveler"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/django/">django</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/django-admin/">django+admin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/15/django-mongodb搭配使用了解/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">django+mongodb搭配使用了解</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
+<!-- Table of Contents -->
 
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Inhalt</strong>
+    
+        <ol class="artnav">Nichts</ol>
+    
+    </div>
+  </aside>
 </section>
         
       </div>
@@ -285,6 +333,8 @@
 
 
 
+
+  <script src="/js/dialog.js"></script>
 
 
 
